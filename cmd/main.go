@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/XapTMaH19/todo-app"
-	"github.com/XapTMaH19/todo-app/internal/handler"
-	"github.com/XapTMaH19/todo-app/internal/service"
-	"github.com/XapTMaH19/todo-app/internal/storage"
+	AldanWeb "github.com/XapTMaH19/Aldan-Web"
+	"github.com/XapTMaH19/Aldan-Web/internal/handler"
+	"github.com/XapTMaH19/Aldan-Web/internal/service"
+	"github.com/XapTMaH19/Aldan-Web/internal/storage"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 	"github.com/sirupsen/logrus"
@@ -37,7 +37,7 @@ func main() {
 	storage := storage.NewStorage(db)
 	services := service.NewService(storage)
 	handlers := handler.NewHandler(services)
-	srv := new(todo.Server)
+	srv := new(AldanWeb.Server)
 	if err := srv.Run(viper.GetString("port"), handlers.InitRoutes()); err != nil {
 		logrus.Fatalf("eпроизошла ошибка при запуске http-сервера: %v", err.Error())
 	}

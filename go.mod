@@ -1,4 +1,4 @@
-module github.com/XapTMaH19/todo-app
+module github.com/XapTMaH19/Aldan-Web
 
 go 1.22.2
 

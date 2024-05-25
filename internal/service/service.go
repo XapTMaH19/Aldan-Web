@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/XapTMaH19/todo-app/internal/models"
-	"github.com/XapTMaH19/todo-app/internal/storage"
+	"github.com/XapTMaH19/Aldan-Web/internal/models"
+	"github.com/XapTMaH19/Aldan-Web/internal/storage"
 )
 
 type Authorization interface {
