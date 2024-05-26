@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/XapTMaH19/Aldan-Web/internal/models"
+	"github.com/XapTMaH19/AldanWeb/internal/models"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -23,7 +23,6 @@ func (h *Handler) signUp(c *gin.Context) {
 	c.JSON(http.StatusOK, map[string]interface{}{
 		"id": id,
 	})
-
 }
 
 type signInInput struct {

@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/XapTMaH19/Aldan-Web/internal/models"
-	"github.com/XapTMaH19/Aldan-Web/internal/storage"
+	"github.com/XapTMaH19/AldanWeb/internal/models"
+	"github.com/XapTMaH19/AldanWeb/internal/storage"
 )
 
 type Authorization interface {
@@ -11,16 +11,8 @@ type Authorization interface {
 	ParseToken(token string) (int, error)
 }
 
-type TodoList interface {
-}
-
-type TodoItem interface {
-}
-
 type Service struct {
 	Authorization
-	TodoList
-	TodoItem
 }
 
 func NewService(storage *storage.Storage) *Service {

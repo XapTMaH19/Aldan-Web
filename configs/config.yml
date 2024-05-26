@@ -7,3 +7,14 @@ db:
     port: "5436"
     dbname: "postgres"
     sslmode: "disable"
+
+rabbitmq:
+    username: "guest"
+    password: "guest"
+    host: "localhost"
+    port: "5672"
+
+    queues:
+        register: "register_queue"
+        login: "login_queue"
+

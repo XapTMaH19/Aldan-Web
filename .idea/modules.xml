@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Aldan-Web.iml" filepath="$PROJECT_DIR$/.idea/Aldan-Web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/AldanWeb.iml" filepath="$PROJECT_DIR$/.idea/AldanWeb.iml" />
     </modules>
   </component>
 </project>

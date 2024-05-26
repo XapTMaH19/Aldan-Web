@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/XapTMaH19/Aldan-Web/internal/service"
+	"github.com/XapTMaH19/AldanWeb/internal/service"
 	"github.com/gin-gonic/gin"
 )
 
@@ -23,13 +23,13 @@ func (h Handler) InitRoutes() *gin.Engine {
 	}
 	api := router.Group("/api", h.userIdentity)
 	{
-		lists := api.Group("/schemes")
+		schemes := api.Group("/schemes")
 		{
-			lists.POST("/", h.createScheme)
-			lists.GET("/", h.getAllSchemes)
-			lists.GET("/:id", h.getSchemeById)
-			lists.PUT("/:id", h.updateScheme)
-			lists.DELETE("/:id", h.deleteScheme)
+			schemes.POST("/", h.createScheme)
+			schemes.GET("/", h.getAllSchemes)
+			schemes.GET("/:id", h.getSchemeById)
+			schemes.PUT("/:id", h.updateScheme)
+			schemes.DELETE("/:id", h.deleteScheme)
 
 		}
 	}

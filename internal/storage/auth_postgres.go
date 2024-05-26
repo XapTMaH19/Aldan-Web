@@ -2,7 +2,7 @@ package storage
 
 import (
 	"fmt"
-	"github.com/XapTMaH19/Aldan-Web/internal/models"
+	"github.com/XapTMaH19/AldanWeb/internal/models"
 	"github.com/jmoiron/sqlx"
 )
 

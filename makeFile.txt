@@ -1,6 +1,6 @@
 //Docker
 sudo docker pull postgres
-sudo docker run --name=todo-db -e POSTGRES_PASSWORD=10007 -p 5436:5432 -d --rm postgres
+sudo docker run --name=aldanWeb-db -e POSTGRES_PASSWORD=10007 -p 5431:5436 -d --rm postgres
 sudo docker ps
 sudo docker exec -it 7e19493c4d96b33dd8f0cf4f87606a1ac4dfab05a8986074f4f5133c058eb059 /bin/bash
 psql -U postgres

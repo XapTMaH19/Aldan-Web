@@ -1,0 +1,23 @@
+services:
+  app:
+    image: prod-service:local
+    container_name: aldanWeb-backend
+    depends_on:
+      - postgresql
+    networks:
+      - ps
+
+  postgresql:
+    image: postgres:latest
+    container_name: ps-psql
+    environment:
+      - POSTGRES_DB=prodservice
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=posgres
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    networks:
+      - ps
+
+networks:
+  ps:

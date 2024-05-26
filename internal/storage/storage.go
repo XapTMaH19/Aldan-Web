@@ -1,8 +1,7 @@
 package storage
 
 import (
-	"github.com/XapTMaH19/Aldan-Web/internal/models"
-	"github.com/jmoiron/sqlx"
+	"github.com/XapTMaH19/AldanWeb/internal/models"
 )
 
 type Authorization interface {
@@ -10,20 +9,12 @@ type Authorization interface {
 	GetUser(username string, password string) (models.User, error)
 }
 
-type TodoList interface {
-}
-
-type TodoItem interface {
-}
-
 type Storage struct {
 	Authorization
-	TodoList
-	TodoItem
 }
 
-func NewStorage(db *sqlx.DB) *Storage {
+func NewStorage(r *ClientRabbitMQ) *Storage {
 	return &Storage{
-		Authorization: NewAuthPostgres(db),
+		Authorization: NewAuthRabbitMQ(r),
 	}
 }
