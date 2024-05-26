@@ -4,8 +4,8 @@ import (
 	"crypto/sha1"
 	"errors"
 	"fmt"
-	"github.com/XapTMaH19/Aldan-Web/internal/models"
-	"github.com/XapTMaH19/Aldan-Web/internal/storage"
+	"github.com/XapTMaH19/AldanWeb/internal/models"
+	"github.com/XapTMaH19/AldanWeb/internal/storage"
 	"github.com/dgrijalva/jwt-go"
 	"time"
 )
